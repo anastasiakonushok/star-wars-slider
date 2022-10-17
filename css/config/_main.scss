@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    overflow: hidden;
+}
+
+.main {
+    font-family: 'Oswald', sans-serif;
+    background: url(/img/bg-star.jpg) no-repeat center center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    min-height: 750px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.wrapp {
+    height: 600px;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1050px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.a-c {
+    align-items: center
+}
+
+.bg-shape {
+    height: 80%;
+    background-image: linear-gradient(-45deg, #d12567 0%, #ce1b1b 100%);
+    box-shadow: 0px 30px 139px 0px rgba(10, 22, 31, 0.26);
+    border-radius: 30px;
+    padding: 20px 20px;
+    width: 25%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    display: flex;
+    align-items: center;
+
+    img {
+        object-fit: contain;
+        width: 400px;
+        display: block;
+        object-position: left center;
+        opacity: .4;
+        transform: rotate(-90deg) translateY(-50%);
+        max-width: inherit;
+        left: 10px;
+        position: absolute;
+    }
+
+}
+
+.slider {
+    position: relative;
+
+    &__slide {
+        position: relative;
+        z-index: 10;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 85%;
+            display: block;
+            background-image: linear-gradient(-45deg, #5208245d 0%, #3f0b9254 100%);
+            box-shadow: 0px 30px 139px 0px rgba(10, 22, 31, 0.26);
+            border-radius: 30px;
+            top: 10%;
+            right: 0px;
+            z-index: 1;
+        }
+
+        .slide {
+            z-index: 100;
+            position: relative;
+            padding: 0px 100px ;
+            &__img {
+                max-width: 450px;
+            }
+
+            &__content {
+                position: relative;
+            }
+        }
+    }
+}
